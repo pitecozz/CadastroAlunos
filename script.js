@@ -4,11 +4,26 @@ const salvararmazenamento = () => {
 const cadastrodealuno = () => {
     //henrique aplique sua função aq.
 }
-const cadastronotas1bim = () => {
-    //função para receber nota da prova, da prova integrada e da AEP do primeiro bimestre. salvaarmazenamento()
-}
-const cadastronotas2bim = () => {
-    //função para receber nota da prova, da prova integrada e da AEP do segundo bimestre. salvaarmazenamento()
+const adnota = () =>{
+	const prova1 = parseFloat(document.getElementById('input_prova_1').value);
+	const integrada1 = parseFloat(document.getElementById('input_prova_integrada_1').value);
+	const aep1 = parseFloat(document.getElementById('input_aep_1').value);
+
+
+	const prova2 = parseFloat(document.getElementById('prova2').value);
+	const integrada2 = parseFloat(document.getElementById('integrada2').value);
+	const aep2 = parseFloat(document.getElementById('aep2').value);
+
+	const notas = {
+		prova1: prova1,
+		prova2: prova2,
+		integrada1: integrada1,
+		integrada2: integrada2,
+		aep1: aep1,
+		aep2: aep2
+	};
+
+	localStorage.setItem('notas do aluno', JSON.stringify(notas));
 }
 const statusdeaprovacao = (nota1bim, nota2bim) => {
     let media = (nota1bim + nota2bim) / 2;
