@@ -1,26 +1,35 @@
-@import url("https://fonts.google.com/share?selection.family=Jacquard+12+Charted|Jersey+15");
+@import url("https://fonts.google.com/share?selection.family=Sedan:ital@0;1");
 
 html, body{
     height: 100%;
     margin: 0;
-    font-family: "Jersey 15", sans-serif;
+    font-family:  "Sedan", serif;
 }
-.background-gradient{
-    background: repeating-linear-gradient(
-        to bottom,
-        #6B705C 0%,     
-        #faeaeb 2%, 
-        #345B63 4%
+.background1{
+    background: linear-gradient(
+        to right, 
+        #000000 0%, 
+        #faeaeb 0%, 
+        #faeaeb 10%, 
+        #000000 10%,
+        #000000 20%,
+        #faeaeb 20%,
+        #faeaeb 30%
     );
-    background-size: 100% 4%;
+    background-size: 1% ;
+    border-right: 8px solid black;
+    border-left: 8px solid black;
 }
-
+.background2{
+    background-color: #faeaeb;
+    border-top: 8px solid black;
+    border-bottom: 8px solid black;
+}
+}
 
 
 .container{
-    background-color:#faeaeb;
     border: none;
-    border-bottom: 5px solid black;
     overflow: hidden;
 }
 .titulo{
@@ -35,15 +44,15 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%;
+    padding: 1%;
 }
 /* container dos formularios */
 form .container{
     background-color:#faeaeb;
-    margin: 5px auto;
+    margin: 15px auto;
     border:5px solid #000000;
     width: 80%;
-    padding: 2%;
+    padding: 3%;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -52,18 +61,8 @@ form .container .titulosformularios{
     text-align: center;
     width: 100%;
     font-size: 24px;
-    animation: tituloformularioanimation 2s ease-in-out forwards ;
 }
-@keyframes tituloformularioanimation {
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+
 
 form .container .item {
     display: flex;
@@ -72,7 +71,7 @@ form .container .item {
     width: 100%;
     margin-bottom: 1%;
     font-size: 20px;
-    animation: tituloitemanimation 3s ease-in-out forwards;
+    animation: tituloitemanimation 2s ease-in-out forwards;
 }
 @keyframes tituloitemanimation {
     from{
@@ -110,7 +109,7 @@ label {
 .containerJS{
     background-color:#faeaeb;
     border: none;
-    border-top: 5px solid black;
+    border-top: 8px solid black;
     overflow: hidden;
     font-size: 20px;
 }
